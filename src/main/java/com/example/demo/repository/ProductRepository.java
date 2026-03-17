@@ -43,7 +43,7 @@ public class ProductRepository {
         // TODO: Loop through products, find matching ID
 
         for(Product product: products){
-            if(product.getId() == id){
+            if(product.getId().equals(id)){
                 return Optional.of(product);
             }
         }
@@ -86,7 +86,7 @@ public class ProductRepository {
         // TODO: Find and remove the product with matching ID
         Optional<Product> productId = findById(id);
         if(productId.isPresent()){
-            products.remove(productId.get().getId());
+            products.remove(productId.get());
             return true;
         }
 
