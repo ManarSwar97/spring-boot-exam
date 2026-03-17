@@ -68,6 +68,7 @@ public class ProductRepository {
             for(int p = 0; p<products.size(); p++){
                 if(products.get(p).getId() == product.getId()){
                     products.set(p, product);
+                    break;
 
                 }
             }
