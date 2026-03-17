@@ -86,7 +86,7 @@ public class ProductRepository {
         // TODO: Find and remove the product with matching ID
         Optional<Product> productId = findById(id);
         if(productId.isPresent()){
-            products.remove(id);
+            products.remove(productId.get().getId());
             return true;
         }
 
